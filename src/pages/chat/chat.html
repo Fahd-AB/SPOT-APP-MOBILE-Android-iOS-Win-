@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Chat page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button icon-only clear class='flowl' mode="ios" (click)="gotomain()">
+      <ion-icon name='ios-arrow-round-back-outline' mode="ios"></ion-icon>
+    </button>
+    <div class='fl'>{{ProfileName}}</div>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding >
+  <div class="firstdiv1">
+    <div class="photcircle1">
+      <img src="{{amiPhoto}}" class="cimchat">
+    </div>
+    <br><br>
+    <div class="profilename1">
+    <div class="nametext">{{ amiName }}</div><div id="sta"></div><br>
+    <button ion-button icon-only small clear mode="ios" color="primary" class="pfont1">
+      <ion-icon name='ios-pin-outline'  color="primary"></ion-icon>
+      &nbsp; {{amiRegion}} &nbsp;
+    </button>
+    </div>
+
+  </div>
+  <hr class="trait1">
+  <br>
+<div id="chatbox" class="contbox"></div>
+
+
+</ion-content>
+<ion-footer id="footer">
+  <ion-toolbar>
+    <button ion-button icon-only  clear  color="royal" mode="ios" class="fli" style="height:25px;width:30px;">
+    <ion-icon name="ios-camera-outline" mode="ios"></ion-icon>
+    </button>
+    <button ion-button icon-only  clear color="royal" mode="ios" class="fli" style="height:25px;width:30px;">
+    <ion-icon name="ios-attach-outline" mode="ios"></ion-icon>
+    </button>
+      <ion-input type="text"  [(ngModel)]="msginput" clearInput color="dark" mode="ios" class="fli" id="text"></ion-input>
+    <ion-buttons end class="fli">
+      <button ion-button icon-right small clear color="royal" mode="ios" class="sendbtn" (click)="send()">
+        Envoyer
+        <ion-icon name="ios-send-outline" mode="ios"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

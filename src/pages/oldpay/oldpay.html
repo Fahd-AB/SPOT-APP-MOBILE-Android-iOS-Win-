@@ -1,0 +1,48 @@
+<!--
+  Generated template for the Payementedit page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button icon-only clear  class='flowl' mode="ios" (click)="back()">
+      <ion-icon name='ios-arrow-round-back-outline' mode="ios"></ion-icon>
+    </button>
+    <div class='fl'>Payements Traitées</div>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="cards-bg">
+  <div id="container13"><div class="loadingcontainer"><img src="assets/img/loading_simple.gif" class="loadingimg"></div></div>
+    <ion-card  *ngFor="let card of cards">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{ card?.abonneur_photo }}">
+        </ion-avatar>
+        <div class="freindn">{{ card?.abonneur_name }}</div><br>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="subtle" large item-start name='ios-information-circle-outline'></ion-icon>
+        <h4>Evenement</h4>
+        <p>{{card?.event_titre}}</p>
+        <h4>Type</h4>
+        <p>{{card?.event_type}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="subtle" large item-start name='ios-cash-outline'></ion-icon>
+        <h4>Payement</h4>
+        <p ion-text color="secondary">{{ card?.montant }}$ via {{ card?.methode }}</p>
+        <p ion-text color="secondary">{{ card?.abonneur_email }}</p>
+        <h4>Date Payement</h4>
+        <div class="freindm">{{ card?.date }}</div>
+      </ion-item>
+      <ion-item actions>
+        <ion-note item-start style="font-size:11px;">
+          {{ card?.timesince }}
+        </ion-note>
+        <span ion-text item-end color="{{card?.trans_status_theme}}" class="item-bold">{{ card?.trans_status_name }}&nbsp;<ion-icon name='{{ card?.trans_status_icon }}'></ion-icon></span>
+      </ion-item>
+    </ion-card>
+</ion-content>

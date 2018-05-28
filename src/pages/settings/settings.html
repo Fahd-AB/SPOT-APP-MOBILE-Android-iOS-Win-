@@ -1,0 +1,69 @@
+<!--
+  Generated template for the Settings page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button icon-only clear class='flowl' mode="ios"  (click)="confirmchanges()">
+      <ion-icon name='ios-arrow-round-back-outline' mode="ios"></ion-icon>
+    </button>
+    <div class='fl'>Paramètres</div>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="settpage">
+  <div class="firstdiv2">
+    <div class="csettphoto"><img src="{{ Profilephoto }}" (error)="updateUrl($event)" class="csettim"></div>
+    <div class="profilenamebox">
+    <div class="pronametext">{{ ProfileName }}</div><br>
+    <button ion-button icon-only small clear mode="ios" color="primary" class="pfont2">
+      <ion-icon name='ios-pin-outline'  color="primary"></ion-icon>
+      &nbsp; {{ ProfileRegion }} &nbsp;
+    </button>
+    </div>
+
+  </div>
+  <hr class="trait2">
+  <br>
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="email" clearInput mode="ios" ></ion-input>
+  </ion-item>
+
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Tél</ion-label>
+    <ion-input type="tel" [(ngModel)]="tel" clearInput mode="ios"></ion-input>
+  </ion-item>
+
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Date de naissance</ion-label>
+     <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="date_naissance" mode="ios"></ion-datetime>
+  </ion-item>
+
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Adresse</ion-label>
+    <ion-textarea type="text" [(ngModel)]="adresse" mode="ios"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Sexe</ion-label>
+    <ion-select [(ngModel)]="gender"  mode="ios">
+      <ion-option value="f">Femme</ion-option>
+      <ion-option value="m">Homme</ion-option>
+    </ion-select>
+  </ion-item>
+<br>
+  <div class="centered">
+  <button ion-button icon-right small clear color="royal" mode="ios" class="sendbtn" (click)="gotomdpchange()">
+    Modifier le mot de passe
+    <ion-icon name="ios-create-outline" mode="ios"></ion-icon>
+  </button>
+  </div>
+<br>
+<button ion-button small (click)="update()" full mode="ios">Terminer</button>
+<br>
+<button ion-button small clear class="smallfont" (click)="back()" mode="ios" full mode="ios">Annuler la modification</button>
+</ion-content>

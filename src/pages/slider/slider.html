@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Slider page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+</ion-header>
+
+
+<ion-content class="no-scroll">
+<ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+<ion-slide >
+  <div class="diag" style="background : url('assets/img/whitebg.svg') no-repeat;">
+  <ion-icon class="ic" name='md-analytics' color="primary" [@bounce]='state' (@bounce.done)="animationDone()" ></ion-icon>
+  </div>
+  <div [@bounce]='state'>
+  <h2>Connecter avec vos amis</h2>
+  <p>Rester connecter avec vos amis et vos proches avec une interface intuitive.</p>
+  </div>
+</ion-slide >
+<ion-slide >
+  <div class="diag" style="background : url('assets/img/whitebg.svg') no-repeat;">
+  <ion-icon class="ic" name='ios-camera' color="primary" [@bounce]='state'></ion-icon>
+  </div>
+  <div [@bounce]='state'>
+  <h2>Partager des moments spéciales</h2>
+  <p>Grace au spot vous pouvez publier des images, vidéos et duffuser en directs.</p>
+  </div>
+</ion-slide>
+<ion-slide >
+  <div class="diag" style="background : url('assets/img/whitebg.svg') no-repeat;">
+  <ion-icon class="ic" name='ios-navigate-outline' color="primary" [@bounce]='state'></ion-icon>
+  </div>
+  <div [@bounce]='state'>
+  <h2>Découvrer votre entourage</h2>
+  <p>Participer au évenements dans votre région avec vos amis.</p>
+  </div>
+</ion-slide>
+</ion-slides>
+<button (click)="skip()" id="skip" >{{ skipMsg }}</button>
+</ion-content>

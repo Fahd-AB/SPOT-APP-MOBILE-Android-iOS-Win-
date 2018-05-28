@@ -1,0 +1,40 @@
+<!--
+  Generated template for the History page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button icon-only clear  class='flowl' mode="ios" (click)="back()">
+      <ion-icon name='ios-arrow-round-back-outline' mode="ios"></ion-icon>
+    </button>
+    <div class='fl'>Historique de connexion</div>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="cards-bg">
+  <div id="container14"><div class="loadingcontainer"><img src="assets/img/loading_simple.gif" class="loadingimg"></div></div>
+    <ion-card  *ngFor="let card of cards">
+      <ion-item>
+        <ion-icon color="subtle" large item-start name='{{card?.system_logo}}' ></ion-icon>
+        <h4>Système</h4>
+        <p>{{card?.system}}</p>
+        <h4>Adresse IP</h4>
+        <p>{{card?.ip}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="subtle" large item-start name='ios-clock-outline'></ion-icon>
+        <h4>Date connexion</h4>
+        <div class="freindm">{{ card?.date }}</div>
+      </ion-item>
+      <ion-item actions>
+        <ion-note item-start style="font-size:11px;">
+          {{ card?.timesince }}
+        </ion-note>
+        <span ion-text item-end color="{{card?.stat_theme}}" class="item-bold">{{ card?.stat_name }}&nbsp;<ion-icon name='{{ card?.stat_icon }}'></ion-icon></span>
+      </ion-item>
+
+    </ion-card>
+</ion-content>

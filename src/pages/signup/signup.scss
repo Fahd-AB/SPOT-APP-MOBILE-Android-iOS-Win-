@@ -1,0 +1,27 @@
+page-signup {
+
+}
+.pagec{
+  background-color: #eee;
+  font-size: 12px;
+  overflow: hidden;
+}
+.smallfont{
+    font-size: 12px;
+}
+.instructions{
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+  display: block;
+  text-align: center;
+  padding: 2px;
+}
+.no-scroll .scroll-content{
+  overflow: hidden;
+  background-color: #eee;
+  font-size: 12px;
+  height: 100%;
+  display: block;
+  vertical-align: middle;
+}

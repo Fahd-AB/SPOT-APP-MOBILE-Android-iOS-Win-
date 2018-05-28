@@ -1,0 +1,76 @@
+<!--
+  Generated template for the Eventinfos page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button icon-only clear  class='flowl' mode="ios" (click)="gotomain()">
+      <ion-icon name='ios-arrow-round-back-outline' mode="ios"></ion-icon>
+    </button>
+    <div class='fl'>Détails de l'évènement</div>
+   </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="cards-bg">
+  <ion-card class="adv-map">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{logotype}}"  class="smalliconimg">
+      </ion-avatar>
+      <h4>{{titre}}</h4>
+      <p>Type : {{type}}<br>Créé le : {{date_creation}}<br>Abonnements : ({{nb_abonnes}})</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='ios-information-circle-outline'></ion-icon>
+      <h4>Description</h4>
+      <p>{{desc}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='ios-cash-outline'></ion-icon>
+      <h4>Payement</h4>
+      <p>{{payement}}</p>
+    </ion-item>
+    <ion-item actions>
+      <span ion-text item-start color="{{color}}" class="item-bold">{{status}}</span>
+      <button ion-button color="primary" clear item-end icon-end   (click)="abonnement()">
+        {{abonner}} &nbsp;
+        <ion-icon name='{{btnicon}}'></ion-icon>
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+
+
+  <ion-card class="invisible" id="ctrlbuttons">
+    <ion-item actions text-center>
+      <button ion-button color="primary" outline (click)="modifier()">
+       Modifier &nbsp;
+        <ion-icon name='ios-create-outline'></ion-icon>
+      </button>
+      <button ion-button color="danger" outline (click)="showConfirm()">
+       Supprimer &nbsp;
+        <ion-icon name='ios-remove-circle-outline'></ion-icon>
+      </button>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card *ngFor="let card of cards">
+  <ion-item class="CEreduce">
+    <ion-avatar item-start>
+      <img src="{{ card?.ami_photo }}">
+    </ion-avatar>
+    <h4>{{ card?.ami_prenom }} {{ card?.ami_nom_famille }}</h4>
+    <p>{{ card?.ami_region }}</p>
+    <button ion-button clear item-end color="primary" mode="ios" class="pubbtn" (click)="inviter_ami(card?.ami_id)">
+      {{ card?.button}} &nbsp;
+      <ion-icon name="{{ card?.icon }}" mode="ios"></ion-icon>
+    </button>
+   </ion-item>
+  </ion-card>
+
+</ion-content>

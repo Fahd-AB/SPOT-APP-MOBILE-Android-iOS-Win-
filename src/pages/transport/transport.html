@@ -1,0 +1,65 @@
+<!--
+  Generated template for the Transport page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <button ion-button icon-only clear  class='flowl' mode="ios" (click)="gotomain()">
+      <ion-icon name='ios-arrow-round-back-outline' mode="ios"></ion-icon>
+    </button>
+    <div class='fl'>Transport</div>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content class="cont">
+  <ion-card  id="ctrlbuttons">
+    <ion-item actions text-center>
+      <button ion-button item-start color="primary" clear (click)="setregion()">
+       {{Region}} &nbsp;
+        <ion-icon name='ios-radio-outline'></ion-icon>
+      </button>
+      <button ion-button item-end color="primary" outline (click)="tooffertras()">
+       Créer un offre &nbsp;
+        <ion-icon name='ios-add-circle-outline'></ion-icon>
+      </button>
+    </ion-item>
+  </ion-card>
+    <div id="container15"><div class="loadingcontainer"><img src="assets/img/loading_simple.gif" class="loadingimg"></div></div>
+  <ion-card *ngFor="let card of cards" >
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{card?.client_photo}}">
+      </ion-avatar>
+      <div class="freindn">{{card?.client_name}}</div><br>
+      <div class="freindm">{{card?.date}}</div>
+    </ion-item>
+      <div id="Smap{{card?.id}}" class="Smallmap" ></div>
+    <ion-card-content>
+    Région Destination : {{card?.destination}} <br>
+    Distance : {{card?.distance}} <br>
+    Tarif à partager: {{card?.tarif}} $<br>
+    Type Moyen de transport : {{card?.transport_type}}<br>
+    Nombre max de participants : {{card?.nb_max_inscri}}<br>
+    Personnes atteints : {{card?.nb_inscri}}
+    </ion-card-content>
+    <ion-row>
+      <ion-col id="invrow{{card?.id}}" class="invisible">
+        <div  class="rej-transport-btn" (click)="rejoindre(card?.id)">
+          Rejoindre
+        </div>
+      </ion-col>
+      <ion-col text-center small mode="ios">
+      <span item-left class="{{card?.theme}}"> {{card?.offrestands}}</span>
+      </ion-col>
+      <ion-col icon-left text-center small mode="ios">
+        <ion-note style="font-size:11px;">
+         {{card?.timesince}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

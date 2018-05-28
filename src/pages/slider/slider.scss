@@ -1,0 +1,63 @@
+page-slider {
+
+}
+
+.pagec{
+  background-color: #eee;
+  font-size: 13px;
+  overflow: hidden;
+}
+.smallfont{
+    font-size: 11px;
+}
+.instructions{
+  height: auto;
+  width: auto;
+  margin-top: 50%;
+  display: block;
+  text-align: center;
+  padding: 2px;
+}
+.no-scroll .scroll-content{
+  overflow: hidden;
+  background-color: #EFEFEF !important;
+  font-size: 12px;
+  font-family: 'Raleway';
+
+}
+.diag{
+  position:  absolute;
+  z-index: 1 ;
+  width: 100%;
+  top: 0;
+  height: 64.8%;
+}
+.ic{
+  margin-top: 40%;
+  font-size: 7em;
+}
+h2{
+  margin-top: 80% !important;
+  font-weight: bold;
+  font-size: 1em;
+}
+p{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  font-size: .9em;
+}
+.swiper-pagination-bullet-active{
+  background-color: #1dabc5;
+}
+.swiper-pagination{
+  bottom: 12% !important;
+}
+#skip{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  background: none !important;
+  text-align: center;
+  z-index: 5;
+}

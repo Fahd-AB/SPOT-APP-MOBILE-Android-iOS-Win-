@@ -1,0 +1,58 @@
+page-event {
+.greyback{
+  background-color: #eee;
+}
+}
+.gback{
+  background-color: #eee;
+  font-size: 12px;
+  height: 100%;
+  display: block;
+  vertical-align: middle;
+}
+.div .alert-head {
+  display: none;
+}
+.titlestyle{
+  margin-top: 10px;
+  display: inline-block;
+  font-family: 'Raleway';
+font-size: 13px;
+color : #585858;
+}
+.firstdiv3{
+height: 120px;
+text-align: center;
+width: 100%;
+}
+
+.ceventphoto{
+  height: 80px;
+  width: 80px;
+  border: 3px solid #eee;
+  border-radius: 20px;
+  background-size: cover;
+    display: inline-block;
+    margin: 5px;
+
+}
+.ceventim{
+  height: 100%;
+  width: 100%;
+    background-size: cover;
+  border-radius: 15px;
+}
+.addicon{
+  position: absolute;
+  z-index: 2;
+  margin-left: 60px;
+  margin-top: 65px;
+  height: 30px;
+  width: 30px;
+
+}
+.colorbox{
+  height: 10px;
+  width: 10px;
+  background: green;
+}

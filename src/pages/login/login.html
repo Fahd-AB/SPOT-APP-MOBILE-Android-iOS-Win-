@@ -1,0 +1,28 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content  class="no-scroll2" >
+  <video autoplay loop src="assets/vid/video.mp4" poster="assets/img/poster.png"></video>
+  <div class="cadre">
+  <div class="fade"></div>
+  <div class="bigdiv" ng-controller="redirect">
+    <img src="assets/img/logo3.png">
+  <ion-list inset>
+
+  <ion-item class="pagec1" mode="ios">
+    <ion-label color="light"> <ion-icon name="ios-mail-outline" mode="ios" id="emailicon"></ion-icon> Email</ion-label>
+    <ion-input type="text" [(ngModel)]="linput"  class="inputs" clearInput mode="ios"></ion-input>
+  </ion-item>
+
+  <ion-item class="pagec1" mode="ios">
+    <ion-label color="light"> <ion-icon name="ios-lock-outline" mode="ios" id="passicon"></ion-icon> Mot de passe</ion-label>
+    <ion-input type="password" [(ngModel)]="pinput" class="inputs" clearInput mode="ios"></ion-input>
+  </ion-item>
+  <br>
+<button ion-button  outline  (click)="signinm()" small color="light" class="butn" mode="ios">CONNEXION</button>
+</ion-list>
+<button ion-button clear class="smallfont" (click)="signupm()" color="light" mode="ios">S'inscrire</button><button ion-button clear class="smallfont" (click)="lostm()" color="light" mode="ios">Mot de passe Oublié ?</button>
+</div>
+</div>
+</ion-content>

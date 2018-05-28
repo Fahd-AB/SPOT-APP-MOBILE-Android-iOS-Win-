@@ -1,0 +1,38 @@
+<!--
+  Generated template for the Main page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+  <ion-navbar color="primary">
+    <div class="menu">
+      <button ion-button menuToggle  icon-only clear class='flowl' mode="ios" >
+        <ion-icon name='ios-apps-outline' ></ion-icon>
+      </button>
+      <button ion-button  icon-only  clear class='flowl' mode="ios" (click)="createevent()">
+        <ion-icon name='ios-add-circle-outline' ></ion-icon>
+      </button>
+      <div class="flowl" style="width:68%;margin-top:-2px;">
+      <ion-searchbar (search)="getItems()" [(ngModel)]="text" mode="ios" placeholder="Rechercher" ></ion-searchbar>
+      </div>
+      <button ion-button  icon-only  clear class='flowl' mode="ios" (click)="seeprofile()">
+        <ion-icon name='ios-contact-outline' ></ion-icon>
+      </button>
+        </div>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="no-scroll">
+<div class="mapdiv">
+  <div #map id="map"></div>
+    <div class="contain">
+      <div class="refreshbtn"  (click)="refresh()" ><img src="assets/img/locate.gif"></div><br>
+      <div class="placesbtn"  (click)="gotoplaces()" ><img src="assets/img/Star_Gold1.png"></div>
+    </div>
+
+</div>
+
+</ion-content>

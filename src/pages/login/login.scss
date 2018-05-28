@@ -1,0 +1,81 @@
+page-login {
+
+}
+
+.pagec1{
+  background-color : transparent;
+  font-size: 12px;
+  overflow: hidden;
+  color: #fff;
+
+}
+.cadre{
+  position: relative;
+
+}
+.fade{
+  position: absolute;
+  z-index: 0;
+  background-color: #000;
+  opacity: 0.65;
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+
+}
+.bigdiv{
+  position: absolute;
+  z-index: 2;
+  height: auto;
+  width: 100%;
+  margin-top: 40%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.smallfont{
+    font-size: 12px;
+}
+video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+    }
+.no-scroll2 .scroll-content{
+  overflow: hidden;
+  background-size: cover;
+  font-size: 12px;
+  font-family: 'Raleway';
+}
+.inputs{
+  background-color : transparent;
+  font-size: 14px;
+  border-radius: 0.2px;
+  color: #fff;
+}
+.butn{
+ width: 90%;
+    color: #fff;
+    font-size: 12px;
+
+}
+
+#emailicon{
+  margin-left: 2px;
+  margin-right: 3px;
+}
+#passicon{
+  margin-left: 2px;
+  margin-right: 3px;
+}
+.custom2{
+  background-size: cover;
+  font-size: 12px;
+  font-family: 'Raleway';
+}

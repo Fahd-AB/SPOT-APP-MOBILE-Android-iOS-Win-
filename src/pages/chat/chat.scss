@@ -1,0 +1,150 @@
+page-chat {
+  .activeicon{
+    height: 9px;
+    width: 9px;
+     float:left;
+    background: #2ECC71;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .contbox{
+    height: auto;
+    width: 100%;
+  
+  }
+
+  .bubble {
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    clear: both;
+    margin-bottom: 8px;
+    padding: 13px 14px;
+    vertical-align: top;
+    border-radius: 5px;
+  }
+  .bubble:before {
+    position: absolute;
+    top: 19px;
+    display: block;
+    width: 8px;
+    height: 6px;
+    content: '\00a0';
+    -webkit-transform: rotate(29deg) skew(-35deg);
+            transform: rotate(29deg) skew(-35deg);
+  }
+  .bubble.you {
+    float: left;
+    color: #fff;
+    background-color: #00b0ff;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-animation-name: slideFromLeft;
+    animation-name: slideFromLeft;
+  }
+  .bubble.you:before {
+    left: -3px;
+    background-color: #00b0ff;
+  }
+.bubble.me {
+    float: right;
+    color: #1a1a1a;
+    background-color: #eceff1;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -webkit-animation-name: slideFromRight;
+    animation-name: slideFromRight;
+  }
+ .bubble.me:before {
+    right: -3px;
+    background-color: #eceff1;
+  }
+
+
+
+
+}
+
+.fl{
+  display: inline-block;
+  float: left;
+  color: #eee;
+  width: 80%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Raleway';
+font-size: 14px;
+
+}
+.photcircle1 {
+    width: 60px;
+    height: 60px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    background-size: cover;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    display: inline-block;
+    float: left;
+}
+.cimchat{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.firstdiv1{
+padding: 10px;
+height: 120px;
+text-align: center;
+width: 100%;
+text-align: left;
+
+}
+.profilename1{
+  height: 50px;
+  width: 100%;
+  color : #585858;
+  font-family: 'Raleway';
+font-size: 18px;
+display: inline-block;
+float: left;
+margin: 10px;
+}
+.trait1{
+  background: #f3f3f3;
+  height: 1px;
+  width: 90%;
+}
+.pfont1{
+font-family: 'Raleway';
+font-size: 12px;
+display: inline-block;
+}
+.nametext{
+  display: inline-block;
+  float: left;
+}
+.fli{
+display:inline-block;
+float:left;
+}
+#text{
+  width: 72%;
+  border-radius: 8px;
+  border: 1px #000;
+  background-color: #EDEDED;
+  height: auto;
+  padding-left: 5px;
+
+}
+#footer{
+  height: auto;
+  width: 100%;
+}

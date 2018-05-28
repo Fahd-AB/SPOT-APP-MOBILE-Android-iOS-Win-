@@ -1,0 +1,44 @@
+page-notifications {
+  ion-content.cards-bg {
+    background-color: #f4f4f7;
+  }
+  .normaltextcenter{
+    text-align: center;
+    color: #A6ACAF;
+    font-size: 12px;
+  }
+.greytime{
+  padding-left: 5px;
+  text-align: left;
+  color: #ccc;
+  font-size: 12px;
+}
+.clname{
+  padding-left: 5px;
+  text-align: left;
+  color: #1F618D;
+  font-size: 14px;
+}
+.notiftext{
+  padding-left: 5px;
+  text-align: left;
+  color: #2C3E50;
+  font-size: 14px;
+}
+.loadingimg{
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  background-size: cover;
+}
+.loadingcontainer{
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+.normal-text-center{
+  text-align: center;
+  color: #eee;
+  font-size: 12px;
+}
+}

@@ -1,0 +1,33 @@
+<!--
+  Generated template for the Signup1 page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+</ion-header>
+
+<ion-content class="custom">
+  <div class="instructions">
+    (Etape 1)<br>
+    Introduisez votre adresse email et  votre Numéro de téléphone
+    <br><br>
+    <div class="smallfont">Cette adresse email et ce numéro de téléphone seront utilisées pour vous contactez lors de la récupération de votre mot de passe.</div>
+  <ion-list inset>
+
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Email</ion-label>
+    <ion-input type="text" [(ngModel)]="email" clearInput mode="ios" ></ion-input>
+  </ion-item>
+
+  <ion-item class="pagec" mode="ios">
+    <ion-label>Tél</ion-label>
+    <ion-input type="tel" [(ngModel)]="tel" clearInput mode="ios"></ion-input>
+  </ion-item>
+
+
+  <br>
+  <button ion-button small (click)="next()" full mode="ios">Suivant</button>
+  </ion-list>
+  </div>
+</ion-content>

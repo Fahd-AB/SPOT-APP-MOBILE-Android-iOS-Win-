@@ -1,0 +1,57 @@
+<ion-menu [content]="content" (ionOpen)="menuOpened()">
+  <ion-header>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  </ion-header>
+
+  <ion-content class="no-scroll1" style="background: url(assets/img/BG.png) no-repeat; background-size: cover;">
+    <div class="firstdiv">
+      <button ion-button icon-only class="smallitems" clear menuClose mode="ios" (click)="callsearch()">
+        <ion-icon name='ios-search-outline' color="light"></ion-icon>
+      </button>
+      <div class="photcircle" >
+             <img src= "{{ PPhoto }}" class="proim">
+      </div>
+      <button ion-button icon-only class="smallitems" clear menuClose mode="ios"  (click)="callsettings()">
+        <ion-icon name='ios-settings-outline'  color="light"></ion-icon>
+      </button>
+      <div class="profilename">
+      {{ PName }}
+      </div>
+      <button ion-button icon-only small clear mode="ios" color="light" class="pfont">
+        <ion-icon name='ios-pin-outline'  color="light"></ion-icon>
+        &nbsp; {{ PRegion }} &nbsp;
+      </button>
+
+    </div>
+    <br>
+    <hr class="trait">
+    <br><br>
+    <ion-list >
+      <button ion-button  full clear menuClose mode="ios"  color="light" class="sfont" (click)="callcreateevent()">
+        Créer un évenement
+      </button>
+      <button ion-button  full clear   menuClose mode="ios" color="light" class="sfont" (click)="callgsettings()">
+        Paramètres Générales
+      </button>
+      <button ion-button  full clear   menuClose mode="ios" color="light" class="sfont" (click)="calltransport()">
+        Transport
+      </button>
+      <button ion-button  full clear   menuClose mode="ios" color="light" class="sfont" (click)="callpayhist()">
+        Abonnements
+      </button>
+      <button ion-button  full clear   menuClose mode="ios" color="light" class="sfont" (click)="callpay()">
+        Payements
+      </button>
+      <button ion-button  full clear   menuClose mode="ios" color="light" class="sfont"  (click)="logoutApp()">
+        Déconnexion
+      </button>
+    </ion-list>
+    <br><br>
+    <hr class="trait">
+    <div class="cfont">Fahd Abdellaoui © 2017 Tout Les Droits Réservées</div>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
